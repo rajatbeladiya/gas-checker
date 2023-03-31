@@ -19,6 +19,12 @@ describe("Lock", function () {
       await tx.wait();
       expect(await normalCodeGas.value()).to.equal(1);
     });
+
+    it("Should compare with true/false value", async function () {
+      const { normalCodeGas } = await deploy();
+      const tx = await normalCodeGas.addToValue()
+      await tx.wait();
+    });
   });
 
 });

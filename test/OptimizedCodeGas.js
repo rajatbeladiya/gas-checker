@@ -19,6 +19,12 @@ describe("Lock", function () {
       await tx.wait();
       expect(await optimizedCodeGas.value()).to.equal(1);
     });
+
+    it("Should add value", async function () {
+      const { optimizedCodeGas } = await deploy();
+      const tx = await optimizedCodeGas.addToValue()
+      await tx.wait();
+    });
   });
 
 });

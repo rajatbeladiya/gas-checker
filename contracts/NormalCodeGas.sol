@@ -4,12 +4,14 @@ contract NormalCodeGas {
   uint public value;
   bool boolState = false;
 
-  function getBoolState() public returns (bool) {
+  function getBoolState() public {
     require(boolState == false, "not false");
     value++;
-    return true;
   }
 
+  function addToValue() public {
+    value += 10;
+  }
 
 }
 

@@ -9,9 +9,9 @@ contract OptimizedCodeGas {
     value++;
   }
 
-
-
-
+  function addToValue() public {
+    value = value + 10;
+  }
 
 }
 
