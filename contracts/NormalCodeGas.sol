@@ -13,5 +13,13 @@ contract NormalCodeGas {
     value += 10;
   }
 
+  function getRefundAmount() public {
+    uint256 refund;
+    refund = 10;
+    if (refund > 0) {
+      value = refund;
+    }
+  }
+
 }
 

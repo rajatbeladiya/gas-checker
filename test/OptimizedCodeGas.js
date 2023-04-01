@@ -25,6 +25,12 @@ describe("Lock", function () {
       const tx = await optimizedCodeGas.addToValue()
       await tx.wait();
     });
+
+    it.only("Should check refund", async function () {
+      const { optimizedCodeGas } = await deploy();
+      const tx = await optimizedCodeGas.getRefundAmount()
+      await tx.wait();
+    });
   });
 
 });
